@@ -1,7 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
-import styles from '../styles/styles';
-
+import Home from '../scenes/home'
 class CalculatePi extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +16,7 @@ class CalculatePi extends React.Component {
 
   start() {
     this.timer = setInterval(() => {
-      this.calculate(), console.log('The calculation is carrying out');
+      this.calculate();
     }, 1000);
   }
 
@@ -54,6 +52,7 @@ class CalculatePi extends React.Component {
   }
 
   reset() {
+    clearInterval(this.timer);
     this.setState({
       pi: 3,
       denominator: 2,
@@ -61,16 +60,6 @@ class CalculatePi extends React.Component {
     });
     console.log('reset called!');
   }
-
-  // getPi() {
-  //   return this.state.pi;
-  // }
-  // getSteps() {
-  //   return this.state.steps;
-  // }
-  // getDenom() {
-  //   return this.state.denominator;
-  // }
 
   render() {
     return (
@@ -83,8 +72,5 @@ class CalculatePi extends React.Component {
     );
   }
 }
-// const Calculator = new CalculatePi();
-
-// export default Calculator;
 
 export default CalculatePi;

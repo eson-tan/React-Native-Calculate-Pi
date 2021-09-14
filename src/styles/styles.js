@@ -1,34 +1,43 @@
 import {StyleSheet} from 'react-native';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
   button: {
     borderWidth: 1,
     borderRadius: 10,
-    padding: 10,
-    margin: 20,
-    fontWeight: '300',
+    borderColor: '#5b7566',
+    marginHorizontal: 75,
+    marginVertical: 15,
+    paddingVertical: 20,
+    backgroundColor: '#5b7566',
+    shadowColor: '#000000',
+    shadowOpacity: 0.8,
+    elevation: 6,
+  },
+  buttonText: {
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#f2f2f2',
   },
   pi: {
-     fontSize: 76, 
-     paddingTop: 100,
-     textAlign: 'center'
-  }
+    fontSize: 70,
+    marginVertical: 25,
+    textAlign: 'center',
+    color: '#f2f2f2',
+    textShadowColor: '#525151',
+    textShadowRadius: 10,
+    textShadowOffset: {width: 2, height: 4},
+  },
+  title: {
+    fontSize: 24,
+    textAlign: 'center',
+    marginTop: 45,
+  },
+  background: {
+    backgroundColor: '#87a895',
+    flex: 1,
+  },
 });
 
 export default styles;
