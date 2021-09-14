@@ -34,13 +34,6 @@ class CalculatePi extends React.Component {
         denominator: this.state.denominator + 2,
         steps: this.state.steps + 1,
       });
-      console.log(
-        this.state.pi +
-          ' --- ' +
-          this.state.denominator +
-          ' --- ' +
-          this.state.steps,
-      );
     } else {
       this.setState({
         pi:
@@ -52,13 +45,6 @@ class CalculatePi extends React.Component {
         denominator: this.state.denominator + 2,
         steps: this.state.steps + 1,
       });
-      console.log(
-        this.state.pi.toString() +
-          ' --- ' +
-          this.state.denominator.toString() +
-          ' --- ' +
-          this.state.steps.toString(),
-      );
     }
   }
 
@@ -88,20 +74,12 @@ class CalculatePi extends React.Component {
 
   render() {
     return (
-      <View>
-        <Text>{this.state.pi}</Text>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={this.start.bind(this)}>
-          <Text>START</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={this.stop.bind(this)}>
-          <Text>STOP</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={this.reset.bind(this)}>
-          <Text>RESET</Text>
-        </TouchableOpacity>
-      </View>
+      <Home
+        pi={this.state.pi}
+        start={this.start.bind(this)}
+        stop={this.stop.bind(this)}
+        reset={this.reset.bind(this)}
+      />
     );
   }
 }
